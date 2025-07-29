@@ -114,6 +114,23 @@ header.hero {
   text-align: center;
 }
 
+/* Enlarge mission section text on index */
+.mission-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.mission-content p {
+  font-size: 1.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.mission-statements {
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
 /* Standard background for the rest of the page */
 body, main {
   background: #f5f9f6;
@@ -152,4 +169,83 @@ body, main {
   font-size: 1.15rem;
   line-height: 1.7;
   color: #333;
+}
+
+/* Center Core Services and About sections */
+.services-preview,
+.about-preview {
+  text-align: center;
+}
+
+.services-preview .grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-preview .grid > div {
+  max-width: 250px;
+}
+
+/* Services page row layout */
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-text, .service-image {
+  flex: 1 1 0;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.service-text {
+  background: #f5f9f6;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+  text-align: left;
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c6e49;
+}
+
+.service-text p {
+  font-size: 1.15rem;
+  color: #2c3e50;
+}
+
+.service-image img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+}
+
+@media (max-width: 900px) {
+  .service-row, .service-row.reverse {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+  .service-text, .service-image {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .service-image img {
+    height: 200px;
+  }
 }
