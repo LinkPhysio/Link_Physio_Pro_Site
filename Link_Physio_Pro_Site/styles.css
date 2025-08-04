@@ -236,6 +236,109 @@ body, main {
   box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
 }
 
+.contact-form-embed {
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+  background: #fff;
+  padding: 1rem 0;
+}
+
+/* Make contact-info box narrower, centered, and with a subtle border */
+.contact-info {
+  max-width: 400px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+  border: 1.5px solid #e0f2e9;
+  text-align: center;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+  color: #2c6e49;
+}
+
+.contact-info a {
+  color: #2c6e49;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-form-link {
+  text-align: center;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.cta-secondary {
+  display: inline-block;
+  background: #2c6e49;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+}
+
+.cta-secondary:hover,
+.cta-secondary:focus {
+  background: #218c5a;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Center the Contact page title and intro text */
+main > h1,
+main > p {
+  text-align: center;
+}
+
+/* Opaque plantgraphic1 background for contact page */
+.contact-bg {
+  background: 
+    linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
+    url('plantgraphic1.png') center center/cover no-repeat fixed;
+}
+
+/* Make all contact page main content (including contact-info) use a narrower, centered white box with subtle border */
+.contact-bg main {
+  max-width: 440px;
+  margin: 3rem auto 2.5rem auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(44, 110, 73, 0.09);
+  border: 1.5px solid #e0f2e9;
+  padding: 2.5rem 2rem;
+}
+
+/* Remove background, border, and shadow from contact-info so it blends with main box */
+.contact-bg .contact-info {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 2.5rem 0 0 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  color: #2c6e49;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+
 @media (max-width: 900px) {
   .service-row, .service-row.reverse {
     flex-direction: column !important;
