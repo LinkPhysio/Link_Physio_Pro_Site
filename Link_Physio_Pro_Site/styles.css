@@ -7,15 +7,14 @@ body {
 }
 .header-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  justify-content: space-between;
+  padding: 1.2rem 2rem 1.2rem 1.2rem;
+  background: transparent;
 }
 
 .logo {
-  max-height: 48px; /* Small logo */
+  max-height: 48px;
   width: auto;
   margin: 0;
   display: block;
@@ -46,20 +45,18 @@ body {
 header.hero {
   background-color: #2c6e49;
   color: #fff;
-  padding: 0.5rem 0; /* Much smaller height */
+  padding: 0.5rem 0;
 }
 
-/* Background image for homepage main section */
 .home-bg {
   position: relative;
-  background-image: url('clinic.jpeg'); /* Use your actual image path */
+  background-image: url('clinic.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 80vh;
   width: 100%;
   z-index: 1;
-  /* Optional: add some padding for content */
   padding: 2rem 0;
 }
 
@@ -67,7 +64,7 @@ header.hero {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.7); /* White overlay, 0.7 = 70% transparent */
+  background: rgba(255,255,255,0.7);
   z-index: 2;
   pointer-events: none;
 }
@@ -84,7 +81,7 @@ header.hero {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #e0f2e9;
-  min-height: 90vh;      /* Increase this value for a taller section */
+  min-height: 90vh;
   width: 100vw;
   left: 50%;
   right: 50%;
@@ -101,7 +98,7 @@ header.hero {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.7); /* White overlay, adjust opacity as needed */
+  background: rgba(255,255,255,0.7);
   z-index: 1;
 }
 
@@ -114,7 +111,6 @@ header.hero {
   text-align: center;
 }
 
-/* Enlarge mission section text on index */
 .mission-content h2 {
   font-size: 2.8rem;
   margin-bottom: 1.2rem;
@@ -131,12 +127,10 @@ header.hero {
   line-height: 1.7;
 }
 
-/* Standard background for the rest of the page */
 body, main {
   background: #f5f9f6;
 }
 
-/* Opaque hero image style (matches index) */
 .hero-image {
   position: relative;
   width: 100%;
@@ -153,7 +147,7 @@ body, main {
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.35); /* adjust opacity as needed */
+  background: rgba(0,0,0,0.35);
 }
 .about-section {
   max-width: 800px;
@@ -171,7 +165,46 @@ body, main {
   color: #333;
 }
 
-/* Center Core Services and About sections */
+.about-bg {
+  background:
+    linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
+    url('plantgraphic.png') center center/cover no-repeat fixed;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 700px;
+  margin: 3rem auto 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.about-box {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(44, 110, 73, 0.09);
+  border: 1.5px solid #e0f2e9;
+  padding: 2rem 2rem 1.5rem 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-box h2, .about-box h3 {
+  color: #2c6e49;
+  margin-top: 0;
+  text-align: center;
+}
+
+.about-box ul {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+  text-align: left;
+}
+
 .services-preview,
 .about-preview {
   text-align: center;
@@ -188,7 +221,6 @@ body, main {
   max-width: 250px;
 }
 
-/* Services page row layout */
 .service-row {
   display: flex;
   align-items: center;
@@ -236,6 +268,19 @@ body, main {
   box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
 }
 
+.service-image img[alt="Comprehensive PT"],
+.service-image img[alt="Dry Needling"],
+.service-image img[alt="Graston/IASTM"] {
+  object-fit: contain;
+  background: none;
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
 .contact-form-embed {
   max-width: 700px;
   margin: 0 auto 2.5rem auto;
@@ -246,7 +291,6 @@ body, main {
   padding: 1rem 0;
 }
 
-/* Make contact-info box narrower, centered, and with a subtle border */
 .contact-info {
   max-width: 400px;
   margin: 2.5rem auto;
@@ -294,20 +338,17 @@ body, main {
   text-decoration: underline;
 }
 
-/* Center the Contact page title and intro text */
 main > h1,
 main > p {
   text-align: center;
 }
 
-/* Opaque plantgraphic1 background for contact page */
 .contact-bg {
   background: 
     linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
     url('plantgraphic1.png') center center/cover no-repeat fixed;
 }
 
-/* Make all contact page main content (including contact-info) use a narrower, centered white box with subtle border */
 .contact-bg main {
   max-width: 440px;
   margin: 3rem auto 2.5rem auto;
@@ -318,7 +359,6 @@ main > p {
   padding: 2.5rem 2rem;
 }
 
-/* Remove background, border, and shadow from contact-info so it blends with main box */
 .contact-bg .contact-info {
   background: transparent;
   box-shadow: none;
@@ -328,27 +368,178 @@ main > p {
   margin: 2.5rem 0 0 0;
 }
 
-footer {
-  text-align: center;
-  padding: 1.5rem 0 1rem 0;
-  color: #2c6e49;
-  font-size: 1rem;
+.about-bg main {
   background: transparent;
+  box-shadow: none;
   border: none;
+  padding: 0;
+}
+
+.services-bg main {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.service-text,
+.service-conditions-box {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(44, 110, 73, 0.09);
+  border: 1.5px solid #e0f2e9;
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.service-conditions-box {
+  max-width: 700px;
+  margin: 3rem auto 2.5rem auto;
+}
+
+.service-conditions-box h2 {
+  color: #2c6e49;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-conditions-box ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
+.service-conditions-box li {
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: #2c3e50;
+}
 
-@media (max-width: 900px) {
-  .service-row, .service-row.reverse {
-    flex-direction: column !important;
-    gap: 1.5rem;
-  }
-  .service-text, .service-image {
-    max-width: 100%;
-    min-width: 0;
-  }
-  .service-image img {
-    height: 200px;
-  }
+.service-conditions-box strong {
+  color: #2c6e49;
+}
+
+body {
+}
+
+body.services-bg {
+  background:
+    linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
+    url('plantgraphic.png') center center/cover no-repeat fixed;
+}
+
+.site-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-right: 2.5rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Extended transparent plantgraphic background for home page */
+body.home-bg {
+  position: relative;
+  background:
+    linear-gradient(rgba(245, 249, 246, 0.3), rgba(245, 249, 246, 0.92)),
+    url('clinic.jpeg') center center/cover no-repeat fixed;
+  padding-top: 0 !important;
+}
+
+body.home-bg header.hero {
+  position: relative;
+  top: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+/* Remove extra top padding from main on home page */
+body.home-bg main {
+  padding-top: 0;
+}
+
+.mission-box,
+.services-preview-box,
+.about-preview-box,
+.mission-nobox,
+.services-preview-nobox,
+.about-preview-nobox {
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0 0 2.5rem 0;
+  max-width: 900px;
+  margin: 3rem auto 2.5rem auto;
+  text-align: center;
+}
+
+/* Optional: make text more readable on semi-transparent background */
+.mission-nobox h2,
+.services-preview-nobox h2,
+.about-preview-nobox h2 {
+  color: #2c6e49;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.5);
+}
+
+.mission-nobox p,
+.services-preview-nobox p,
+.about-preview-nobox p,
+.mission-statements,
+.services-preview-nobox .grid > div {
+  color: #234;
+  font-size: 1.15rem;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.3);
+  background: none;
+  box-shadow: none;
+}
+
+.services-preview-nobox .grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.services-preview-nobox .grid > div {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  min-width: 180px;
+  max-width: 220px;
+  flex: 1 1 180px;
+}
+
+.about-preview-nobox p {
+  margin-bottom: 1.5rem;
+}
+
+/* Center the mission section vertically on the home page, with scroll for the rest */
+body.home-bg main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: flex-start;
+  padding-top: 18vh; /* Push mission section further down */
+  box-sizing: border-box;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Add spacing below the mission section for scroll effect */
+.mission-nobox {
+  margin-bottom: 8vh;
 }
