@@ -429,7 +429,7 @@ body.services-bg {
 }
 
 .site-title {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'script', 'Times New Roman', serif;
   font-style: italic;
   font-size: 2.2rem;
   color: #fff;
@@ -441,7 +441,6 @@ body.services-bg {
   vertical-align: middle;
 }
 
-/* Extended transparent plantgraphic background for home page */
 body.home-bg {
   position: relative;
   background:
@@ -457,7 +456,6 @@ body.home-bg header.hero {
   z-index: 10;
 }
 
-/* Remove extra top padding from main on home page */
 body.home-bg main {
   padding-top: 0;
 }
@@ -539,7 +537,28 @@ body.home-bg main {
   margin: 0 auto;
 }
 
-/* Add spacing below the mission section for scroll effect */
 .mission-nobox {
+  margin-top: 40vh;
   margin-bottom: 8vh;
+}
+
+.main-vision {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-vision h1 {
+  font-size: 3rem;
+  color: #2c6e49;
+  font-family: 'Georgia', 'Times New Roman', handwritten;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.5);
+  margin: 0;
 }
