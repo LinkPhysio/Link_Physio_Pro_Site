@@ -5,6 +5,7 @@ body {
   background-color: #f5f9f6;
   color: #2c3e50;
 }
+
 .header-content {
   display: flex;
   align-items: center;
@@ -63,13 +64,16 @@ header.hero {
 .home-bg::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
   z-index: 2;
   pointer-events: none;
 }
 
-.home-bg > * {
+.home-bg>* {
   position: relative;
   z-index: 3;
 }
@@ -97,8 +101,11 @@ header.hero {
 .mission-bg::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255,255,255,0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
   z-index: 1;
 }
 
@@ -123,11 +130,17 @@ header.hero {
 }
 
 .mission-statements {
-  font-size: 1.18rem;
+  font-size: 1.35rem;
   line-height: 1.7;
+  margin-top: 1.2rem;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body, main {
+body,
+main {
   background: #f5f9f6;
 }
 
@@ -138,27 +151,40 @@ body, main {
   overflow: hidden;
   margin-bottom: 2rem;
 }
+
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .hero-overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.35);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
 }
+
 .about-section {
   max-width: 800px;
   margin: 0 auto 3rem auto;
   padding: 0 1rem;
   text-align: center;
 }
+
 .about-section h2 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
+  margin-top: 2.5rem;
   margin-bottom: 1.5rem;
+  color: #2c6e49;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
+
 .about-content {
   font-size: 1.15rem;
   line-height: 1.7;
@@ -181,21 +207,65 @@ body, main {
   padding: 0 1rem;
 }
 
-.about-box {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 16px rgba(44, 110, 73, 0.09);
-  border: 1.5px solid #e0f2e9;
-  padding: 2rem 2rem 1.5rem 2rem;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+.about-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 3rem auto 2.5rem auto;
 }
 
-.about-box h2, .about-box h3 {
+.about-box {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-image-box {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Match height to adjacent text box */
+  min-height: 100%;
+}
+
+.about-image-box img {
+  width: 100%;
+  height: 100%;
+  max-width: 340px;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(44, 110, 73, 0.09);
+  border: 1.5px solid #e0f2e9;
+  background: #fff;
+  display: block;
+}
+
+.about-box h2,
+.about-box h3 {
   color: #2c6e49;
   margin-top: 0;
   text-align: center;
+}
+
+.about-box h3 {
+  font-size: 2rem;
+  color: #2c6e49;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.about-box p,
+.about-content p,
+.about-box ul,
+.about-box li {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2c3e50;
 }
 
 .about-box ul {
@@ -217,7 +287,7 @@ body, main {
   margin-bottom: 1.5rem;
 }
 
-.services-preview .grid > div {
+.services-preview .grid>div {
   max-width: 250px;
 }
 
@@ -235,7 +305,8 @@ body, main {
   flex-direction: row-reverse;
 }
 
-.service-text, .service-image {
+.service-text,
+.service-image {
   flex: 1 1 0;
   min-width: 300px;
   max-width: 500px;
@@ -338,13 +409,13 @@ body, main {
   text-decoration: underline;
 }
 
-main > h1,
-main > p {
+main>h1,
+main>p {
   text-align: center;
 }
 
 .contact-bg {
-  background: 
+  background:
     linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
     url('plantgraphic1.png') center center/cover no-repeat fixed;
 }
@@ -409,18 +480,18 @@ main > p {
 }
 
 .service-conditions-box li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.7rem;
   font-size: 1.08rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #2c3e50;
+  text-align: left;
 }
 
 .service-conditions-box strong {
   color: #2c6e49;
 }
 
-body {
-}
+body {}
 
 body.services-bg {
   background:
@@ -476,24 +547,23 @@ body.home-bg main {
   text-align: center;
 }
 
-/* Optional: make text more readable on semi-transparent background */
 .mission-nobox h2,
 .services-preview-nobox h2,
 .about-preview-nobox h2 {
   color: #2c6e49;
   margin-top: 0;
   margin-bottom: 1.2rem;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.5);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
 }
 
 .mission-nobox p,
 .services-preview-nobox p,
 .about-preview-nobox p,
 .mission-statements,
-.services-preview-nobox .grid > div {
+.services-preview-nobox .grid>div {
   color: #234;
   font-size: 1.15rem;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.3);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
   background: none;
   box-shadow: none;
 }
@@ -506,7 +576,7 @@ body.home-bg main {
   flex-wrap: wrap;
 }
 
-.services-preview-nobox .grid > div {
+.services-preview-nobox .grid>div {
   background: none;
   border-radius: 0;
   box-shadow: none;
@@ -527,7 +597,8 @@ body.home-bg main {
   align-items: center;
   min-height: 100vh;
   justify-content: flex-start;
-  padding-top: 18vh; /* Push mission section further down */
+  padding-top: 18vh;
+  /* Push mission section further down */
   box-sizing: border-box;
   background: none !important;
   border: none !important;
@@ -559,6 +630,29 @@ body.home-bg main {
   font-style: italic;
   font-weight: 700;
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.5);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
   margin: 0;
+}
+
+.service-conditions-box ul.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem 2.5rem;
+  justify-items: start;
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+@media (max-width: 900px) {
+  .service-conditions-box ul.conditions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-conditions-box ul.conditions-grid {
+    grid-template-columns: 1fr;
+  }
 }
