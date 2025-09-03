@@ -293,12 +293,14 @@ main {
 
 .service-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   max-width: 1100px;
   margin: 3rem auto;
   padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .service-row.reverse {
@@ -307,9 +309,10 @@ main {
 
 .service-text,
 .service-image {
-  flex: 1 1 0;
-  min-width: 300px;
+  flex: 1 1 320px;
+  min-width: 260px;
   max-width: 500px;
+  box-sizing: border-box;
 }
 
 .service-text {
@@ -333,9 +336,10 @@ main {
 
 .service-image img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 12px;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 16px;
   box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
 }
 
@@ -654,5 +658,108 @@ body.home-bg main {
 @media (max-width: 600px) {
   .service-conditions-box ul.conditions-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* Prevent horizontal scrolling and overflow on the services page */
+body.services-bg,
+.services-bg main {
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+/* Make service rows wrap and images/text scale on smaller screens */
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.service-text,
+.service-image {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for service rows and images */
+@media (max-width: 900px) {
+  .service-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .service-text,
+  .service-image {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .service-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Prevent images from causing overflow */
+.service-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(44, 110, 73, 0.07);
+}
+
+@media (max-width: 700px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1.15rem;
+    text-align: center;
+    border-radius: 6px;
+    background: rgba(44, 110, 73, 0.07);
+    color: #2c6e49;
+    margin: 0;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    background: #e0f2e9;
+    color: #218c5a;
+    text-decoration: underline;
   }
 }
