@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f9f6;
@@ -26,6 +26,10 @@ body {
   gap: 2rem;
 }
 
+footer {
+  text-align: center;
+}
+
 .nav-link {
   color: #fff;
   text-decoration: none;
@@ -43,15 +47,19 @@ body {
   text-decoration: underline;
 }
 
-header.hero {
+header {
   background-color: #2c6e49;
   color: #fff;
   padding: 0.5rem 0;
+  position: fixed !important ;
+  width: 100%;
+  z-index: 10 !important;
+  height: 80px;
 }
 
 .home-bg {
   position: relative;
-  background-image: url('clinic.jpeg');
+  background-image: url("clinic.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -73,14 +81,14 @@ header.hero {
   pointer-events: none;
 }
 
-.home-bg>* {
+.home-bg > * {
   position: relative;
   z-index: 3;
 }
 
 .mission-bg {
   position: relative;
-  background-image: url('clinic.jpeg');
+  background-image: url("clinic.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -192,9 +200,11 @@ main {
 }
 
 .about-bg {
-  background:
-    linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
-    url('plantgraphic.png') center center/cover no-repeat fixed;
+  background: linear-gradient(
+      rgba(245, 249, 246, 0.92),
+      rgba(245, 249, 246, 0.92)
+    ),
+    url("plantgraphic.webp") center center/cover no-repeat fixed;
 }
 
 .about-section {
@@ -203,7 +213,7 @@ main {
   align-items: center;
   gap: 2.5rem;
   max-width: 700px;
-  margin: 3rem auto 2.5rem auto;
+  margin: 0 auto 2.5rem auto;
   padding: 0 1rem;
 }
 
@@ -287,7 +297,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.services-preview .grid>div {
+.services-preview .grid > div {
   max-width: 250px;
 }
 
@@ -297,7 +307,7 @@ main {
   justify-content: center;
   gap: 2rem;
   max-width: 1100px;
-  margin: 3rem auto;
+  margin: auto;
   padding: 2rem 1rem;
 }
 
@@ -409,20 +419,22 @@ main {
   text-decoration: underline;
 }
 
-main>h1,
-main>p {
+main > h1,
+main > p {
   text-align: center;
 }
 
 .contact-bg {
-  background:
-    linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
-    url('plantgraphic1.png') center center/cover no-repeat fixed;
+  background: linear-gradient(
+      rgba(245, 249, 246, 0.92),
+      rgba(245, 249, 246, 0.92)
+    ),
+    url("plantgraphic1.webp") center center/cover no-repeat fixed;
 }
 
 .contact-bg main {
   max-width: 440px;
-  margin: 3rem auto 2.5rem auto;
+  margin: 0 auto 2.5rem auto;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 2px 16px rgba(44, 110, 73, 0.09);
@@ -436,7 +448,7 @@ main>p {
   border: none;
   border-radius: 0;
   padding: 0;
-  margin: 2.5rem 0 0 0;
+  margin: 2.5rem auto;
 }
 
 .about-bg main {
@@ -491,16 +503,19 @@ main>p {
   color: #2c6e49;
 }
 
-body {}
+body {
+}
 
 body.services-bg {
-  background:
-    linear-gradient(rgba(245, 249, 246, 0.92), rgba(245, 249, 246, 0.92)),
-    url('plantgraphic.png') center center/cover no-repeat fixed;
+  background: linear-gradient(
+      rgba(245, 249, 246, 0.92),
+      rgba(245, 249, 246, 0.92)
+    ),
+    url("plantgraphic.webp") center center/cover no-repeat fixed;
 }
 
 .site-title {
-  font-family: 'script', 'Times New Roman', serif;
+  font-family: "script", "Times New Roman", serif;
   font-style: italic;
   font-size: 2.2rem;
   color: #fff;
@@ -514,9 +529,11 @@ body.services-bg {
 
 body.home-bg {
   position: relative;
-  background:
-    linear-gradient(rgba(245, 249, 246, 0.3), rgba(245, 249, 246, 0.92)),
-    url('clinic.jpeg') center center/cover no-repeat fixed;
+  background: linear-gradient(
+      rgba(245, 249, 246, 0.3),
+      rgba(245, 249, 246, 0.92)
+    ),
+    url("clinic.webp") center center/cover no-repeat fixed;
   padding-top: 0 !important;
 }
 
@@ -560,7 +577,7 @@ body.home-bg main {
 .services-preview-nobox p,
 .about-preview-nobox p,
 .mission-statements,
-.services-preview-nobox .grid>div {
+.services-preview-nobox .grid > div {
   color: #234;
   font-size: 1.15rem;
   text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
@@ -576,7 +593,7 @@ body.home-bg main {
   flex-wrap: wrap;
 }
 
-.services-preview-nobox .grid>div {
+.services-preview-nobox .grid > div {
   background: none;
   border-radius: 0;
   box-shadow: none;
@@ -626,7 +643,7 @@ body.home-bg main {
 .main-vision h1 {
   font-size: 3rem;
   color: #2c6e49;
-  font-family: 'Georgia', 'Times New Roman', handwritten;
+  font-family: "Georgia", "Times New Roman", handwritten;
   font-style: italic;
   font-weight: 700;
   letter-spacing: 1px;
@@ -659,7 +676,8 @@ body.home-bg main {
 
 /* Remove extra side space and make content full width on mobile */
 @media (max-width: 700px) {
-  body, html {
+  body,
+  html {
     width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
@@ -689,48 +707,6 @@ body.home-bg main {
   }
 
   /* Header: stack title and tabs vertically, center everything */
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    padding: 1rem 0.5rem;
-    width: 100vw;
-    max-width: 100vw;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 0;
-    margin-left: 0;
-    text-align: center;
-    width: 100vw;
-    display: block;
-  }
-
-  .main-nav {
-    flex-direction: column;
-    gap: 0.25rem;
-    width: 100vw;
-    max-width: 100vw;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-link {
-    display: block;
-    width: 90vw;
-    max-width: 320px;
-    padding: 0.75rem 0;
-    font-size: 1.1rem;
-    text-align: center;
-    border-radius: 6px;
-    background: rgba(44, 110, 73, 0.07);
-    color: #fff !important;
-    margin: 0 auto;
-  }
 
   .nav-link:hover,
   .nav-link:focus {
