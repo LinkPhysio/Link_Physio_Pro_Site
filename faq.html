@@ -1,52 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ - Link Physio</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="about-bg">
-    <header class="hero">
-        <div class="header-content">
-            <span class="site-title">Link Physio</span>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="faq.html" class="nav-link">FAQ</a>
-            </nav>
-        </div>
-    </header>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="script.js"></script>
+  </head>
+  <header>
+    <div class="header-content">
+      <span class="site-title">Link Physio</span>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+      </nav>
+      <button
+        id="menu-btn"
+        style="background-color: #fff; border-radius: 5px"
+        onclick="handleMenuClick(this)"
+      >
+        <i
+          style="max-width: 24px; font-size: 24px"
+          id="open"
+          class="material-icons"
+          >menu</i
+        >
+        <i
+          style="max-width: 24px; font-size: 24px; display: none"
+          id="close"
+          class="material-icons"
+          >close</i
+        >
+      </button>
+    </div>
+  </header>
+  <body class="about-bg">
+    <div id="main-container" style="padding-top: 9rem"></div>
     <main>
-        <section class="about-section">
-            <div class="about-box">
-                <h2>Frequently Asked Questions</h2>
-                <div class="about-content">
-                    <h3>Do I need a physician referral?</h3>
-                    <p>Nope! In Florida, you can start physical therapy without a referral. Just reach out to Link Physio and we can get you booked for your first session.</p>
-                    
-                    <h3>Do you take insurance?</h3>
-                    <p>We keep things simple—Link Physio is completely cash-based. That means no surprise bills, no insurance restrictions, and no complicated paperwork. You pay at the time of your visit and know exactly what you’re getting.</p>
-                    
-                    <h3>Where do sessions take place?</h3>
-                    <p>All visits are by appointment only at Ripple Co-Working in Daytona Beach. It’s a comfortable, private space.</p>
+      <section class="about-section">
+        <div class="about-box">
+          <h2>Frequently Asked Questions</h2>
+          <div class="about-content">
+            <h3>Do I need a physician referral?</h3>
+            <p>
+              Nope! In Florida, you can start physical therapy without a
+              referral. Just reach out to Link Physio and we can get you booked
+              for your first session.
+            </p>
 
-                    <h3>What happens at my first visit?</h3>
-                    <p>We’ll start with a conversation about your goals, history, and current concerns, followed by a full assessment. From there, we’ll jump right into your first treatment so you leave already feeling progress. Wear something comfortable and bring along any medical info you think might help.</p>
-                    
-                    <h3>What conditions do you treat?</h3>
-                    <p>From low back and neck pain to sports injuries, headaches, tendonitis, and vertigo, we treat a wide range of aches, pains, and movement issues. You can check out the <a href="services.html">Services</a> page for the full list.</p>
-                    
-                    <h3>How do I schedule?</h3>
-                    <p>Easy—call, email, or use the <a href="contact.html">Contact</a> page to request your appointment. If you're not sure if it's a right fit, still feel free to reach out and we can discuss!</p>
-                </div>
-            </div>
-        </section>
+            <h3>Do you take insurance?</h3>
+            <p>
+              We keep things simple—Link Physio is completely cash-based. That
+              means no surprise bills, no insurance restrictions, and no
+              complicated paperwork. You pay at the time of your visit and know
+              exactly what you’re getting.
+            </p>
+
+            <h3>Where do sessions take place?</h3>
+            <p>
+              All visits are by appointment only at Ripple Co-Working in Daytona
+              Beach. It’s a comfortable, private space.
+            </p>
+
+            <h3>What happens at my first visit?</h3>
+            <p>
+              We’ll start with a conversation about your goals, history, and
+              current concerns, followed by a full assessment. From there, we’ll
+              jump right into your first treatment so you leave already feeling
+              progress. Wear something comfortable and bring along any medical
+              info you think might help.
+            </p>
+
+            <h3>What conditions do you treat?</h3>
+            <p>
+              From low back and neck pain to sports injuries, headaches,
+              tendonitis, and vertigo, we treat a wide range of aches, pains,
+              and movement issues. You can check out the
+              <a href="services.html">Services</a> page for the full list.
+            </p>
+
+            <h3>How do I schedule?</h3>
+            <p>
+              Easy—call, email, or use the
+              <a href="contact.html">Contact</a> page to request your
+              appointment. If you're not sure if it's a right fit, still feel
+              free to reach out and we can discuss!
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2025 Link Physio. All rights reserved.</p>
+      <p>&copy; 2025 Link Physio. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
